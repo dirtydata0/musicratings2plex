@@ -138,10 +138,9 @@ def print_line():
 
 # Main stuff
 count = 0
-index = -1
 while True:
     count += 1
-    index += 1
+    index = (count - 1)
     audiofile = m3ufile.readline()
     audiofile = audiofile.rstrip('\n')
     print(audiofile)
