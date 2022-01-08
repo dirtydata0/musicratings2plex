@@ -1,6 +1,5 @@
 # musicratings2plex.py
-# A script to sync ratings in the metadata of FLAC and MP3 
-# files with a Plex server.
+# Sync rating tags from FLAC and mp3 files to a Plex server
 
 import re,pathlib,mutagen,plexapi,logging,sys
 
