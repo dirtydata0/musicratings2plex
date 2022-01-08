@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO,filename='error.log',
 filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
 if not len(sys.argv) == 2:
-    print('Usage: musicratings2plex.py $m3ufile')
+    print('Usage: musicratings2plex.py <m3ufile>')
     exit(1)
 
 #Read config.ini file
@@ -66,7 +66,6 @@ def read_id3_tags():
 
 def convert_id3_rating(x):
     global trackrating
-    logging.info("trackrating = %s", trackrating)
     if x == 0:
         trackrating = 0
     elif 1 <= x <= 49:
@@ -89,7 +88,6 @@ def convert_id3_rating(x):
         trackrating = 9
     elif 250 <= x <= 255:
         trackrating = 10
-    logging.info("Converted rating: %s", trackrating)
 
 def print_track_info():
     global trackartist
